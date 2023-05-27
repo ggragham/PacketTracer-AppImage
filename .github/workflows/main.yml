@@ -17,3 +17,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build
         run: ./pkg2appimage PacketTracer.yml
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: PacketTracer
+          path: out/
